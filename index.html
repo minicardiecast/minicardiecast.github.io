@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minicar Diecast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #003366; /* Koyu mavi tema */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+        }
+        .hero {
+            background: url('background.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0 0 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .hero a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #003366; /* Butonun koyu mavi tonu */
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .hero a:hover {
+            background-color: #0055a5; /* Daha açık bir mavi tonu */
+        }
+        .features, .catalog {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .features h2, .catalog h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .features .points, .catalog .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .features .point, .catalog .product {
+            max-width: 300px;
+            text-align: left;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .features .point:hover, .catalog .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .catalog .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            filter: blur(5px); /* Blur efekti */
+            transition: filter 0.3s ease-in-out;
+        }
+        .catalog .product img:hover {
+            filter: none; /* Hover sırasında flu etkisi kaldırılır */
+        }
+        footer {
+            background-color: #003366; /* Koyu mavi tema */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minicar Diecast</h1>
+        <p>1/18 Ölçekli Diecast Modeller</p>
+    </header>
+
+    <section class="hero">
+        <h1>Minicar Diecast - 1/18 Ölçekli Modeller</h1>
+        <p>BMW'nin en prestijli diecast modelleri ve diğer markalar burada.</p>
+        <a href="urunler.html">Hemen Keşfet</a>
+    </section>
+
+    <section class="features">
+        <h2>Neden Minicar Diecast?</h2>
+        <div class="points">
+            <div class="point">
+                <h3>Orijinal Modeller</h3>
+                <p>Tüm ürünler lisanslı ve detaylı olarak üretilmiştir.</p>
+            </div>
+            <div class="point">
+                <h3>Hızlı Teslimat</h3>
+                <p>Siparişleriniz en kısa sürede kapınıza ulaşır.</p>
+            </div>
+            <div class="point">
+                <h3>Koleksiyonerler İçin Özel</h3>
+                <p>Sınırlı sayıda modeller ve özel tasarımlar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <h2>Popüler Ürünlerimiz</h2>
+        <div class="products">
+            <div class="product">
+                <img src="res/product1.jpg" alt="BMW M4 GTS">
+                <h3>BMW M4 GTS - 1/18</h3>
+                <p>1,499.99 TL</p>
+            </div>
+            <div class="product">
+                <img src="res/product2.jpg" alt="BMW E30 M3">
+                <h3>BMW E30 M3 - 1/18</h3>
+                <p>1,899.99 TL</p>
+            </div>
+            <div class="product">
+                <img src="res/product3.jpg" alt="BMW i8 Concept">
+                <h3>BMW i8 Concept - 1/18</h3>
+                <p>2,099.99 TL</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Minicar Diecast. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
