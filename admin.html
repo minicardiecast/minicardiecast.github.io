@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Catalog - Minicar Diecast</title>
+  <style>
+    /* Genel Stil */
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Header */
+    .hero {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+        url('background-admin.jpg') no-repeat center center/cover;
+        color: #051525;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        margin: 10px 0 0;
+    }
+
+    /* Main Sections */
+    main {
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #ff7b00;
+    }
+
+    /* Catalog Section */
+    .catalog-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .item {
+        max-width: 300px;
+        text-align: center;
+        background: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .delete-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .delete-button:hover {
+        background-color: #ff1a1a;
+    }
+
+    /* Add Item Section */
+    .add-item form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 400px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .add-item label {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .add-item input {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .add-item button {
+        padding: 10px 20px;
+        background-color: #ff7b00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .add-item button:hover {
+        background-color: #ff9f40;
+    }
+
+    /* Publish Button */
+    .add-yay {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .add-yay button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: white;
+        background-color: #333;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .add-yay button:hover {
+        background-color: #555;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Dinamik Katalog</h1>
+    <p>Kendi ürünlerinizi ekleyin, düzenleyin veya silin.</p>
+  </header>
+
+  <main>
+    <section id="catalog" class="catalog">
+      <h2>Katalog</h2>
+      <div id="catalog-grid" class="catalog-grid">
+        <!-- Dinamik içerik buraya yüklenecek -->
+      </div>
+    </section>
+
+    <section id="add-item" class="add-item">
+      <h2>Yeni Ürün Ekle</h2>
+      <form id="add-item-form">
+        <label for="item-name">Ürün Adı:</label>
+        <input type="text" id="item-name" placeholder="BMW M4 1/18" required>
+        
+        <label for="item-price">Fiyat:</label>
+        <input type="number" id="item-price" placeholder="150" required>
+        
+        <label for="item-image">Görsel URL:</label>
+        <input type="url" id="item-image" placeholder="https://example.com/image.jpg" required>
+        
+        <button type="submit">Ürünü Ekle</button>
+      </form>
+    </section>
+
+    <section id="publish-section" class="add-yay">
+      <button id="publish-button">Yayınla</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Minicar Diecast - Koleksiyonunuzu genişletin.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
