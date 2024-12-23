@@ -1,0 +1,255 @@
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ürünler - Minicar Diecast</title>
+        <style>
+          /* Buraya product.html'in stilleri yerleştirilecek */
+          /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 130px;
+            margin-right: 20px;
+        }
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333333;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #555555;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #ff7b00;
+        }
+
+          
+    /* Genel Stil */
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Header */
+    .hero {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+        url('background-admin.jpg') no-repeat center center/cover;
+        color: #051525;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        margin: 10px 0 0;
+    }
+
+    /* Main Sections */
+    main {
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #ff7b00;
+    }
+
+    /* Catalog Section */
+    .catalog-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .item {
+        max-width: 300px;
+        text-align: center;
+        background: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .delete-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .delete-button:hover {
+        background-color: #ff1a1a;
+    }
+
+    /* Add Item Section */
+    .add-item form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 400px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .add-item label {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .add-item input {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .add-item button {
+        padding: 10px 20px;
+        background-color: #ff7b00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .add-item button:hover {
+        background-color: #ff9f40;
+    }
+
+    /* Publish Button */
+    .add-yay {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .add-yay button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: white;
+        background-color: #333;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .add-yay button:hover {
+        background-color: #555;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        margin: 0;
+    }
+  
+        </style>
+      </head>
+      <body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">
+            <img src="logo.png" alt="Minicar Diecast Logo">
+            <h1>Minicar Diecast</h1>
+        </a>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Ana Sayfa</a>
+
+            </div>
+        </nav>
+    </header>
+
+        <section class="catalog">
+          <h2>Ürün Kataloğumuz</h2>
+          <div class="catalog-grid">
+            
+                <div class="item">
+                  <img src="https://static.ticimax.cloud/cdn-cgi/image/width=276,quality=85/59938/uploads/urunresimleri/buyuk/hasegawa-hc16-21216-124-olcek-toyota-c-8ecc18.jpg" alt="vxvx">
+                  <h3>vxvx</h3>
+                  <p>Fiyat: 222$</p>
+                </div>
+              
+                <div class="item">
+                  <img src="https://static.ticimax.cloud/cdn-cgi/image/width=276,quality=85/59938/uploads/urunresimleri/buyuk/hasegawa-cr36-25036-124-lancia-stratos-9bee-d.jpg" alt="wewe">
+                  <h3>wewe</h3>
+                  <p>Fiyat: 221$</p>
+                </div>
+              
+          </div>
+        </section>
+        <footer>
+          <p>&copy; 2024 Minicar Diecast - Koleksiyonunuzu genişletin.</p>
+        </footer>
+      </body>
+      </html>
+    
