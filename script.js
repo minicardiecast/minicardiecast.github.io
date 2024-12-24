@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       itemDiv.innerHTML = `
         <img src="${item.image}" alt="${item.name}">
         <h3>${item.name}</h3>
-        <p>Fiyat: ${item.price}$</p>
+        <p>Fiyat: ${item.price}TL</p>
         <button class="delete-button" data-index="${index}">Sil</button>
       `;
       catalogGrid.appendChild(itemDiv);
