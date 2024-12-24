@@ -66,15 +66,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <style>
           /* Buraya product.html'in stilleri yerleştirilecek */
           /* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* Küçük ekranlarda elemanları alt satıra geçirir */
-}
+       header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 10px 20px;
+       background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       flex-wrap: wrap; /* Küçük ekranlarda elemanları alt satıra geçirir */
+         }
         .logo {
             display: flex;
             align-items: center;
@@ -130,7 +130,7 @@ header {
                 <div class="item">
                   <img src="${item.image}" alt="${item.name}">
                   <h3>${item.name}</h3>
-                  <p>Fiyat: ${item.price}$</p>
+                  <p>Fiyat: ${item.price}TL</p>
                 </div>
               `
               )
